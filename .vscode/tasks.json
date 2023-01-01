@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C++: Build Debug and Run (g++)",
+            "command": "g++ -c src/*.cpp -std=c++14 -g -Wall -m64 -I include -I D:/Programs/SFML-2.5.1-mingw/include && g++ *.o -o bin/debug/main -L D:/Programs/SFML-2.5.1-mingw/lib -lsfml-audio -lsfml-graphics -lsfml-system -lsfml-network -lsfml-window && start bin/debug/main",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "C++: Build Release (g++)",
+            "command": "g++ -c src/*.cpp -std=c++14 -O3 -Wall -m64 -I include -I D:/Programs/SFML-2.5.1-mingw/include && g++ *.o -o bin/release/main -s -L D:/Programs/SFML-2.5.1-mingw/lib -lsfml-audio -lsfml-graphics -lsfml-system -lsfml-network -lsfml-window -mwindows && start bin/release/main",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+    ]
+}
